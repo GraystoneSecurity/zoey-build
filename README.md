@@ -5,4 +5,4 @@ Project codename "Zoey" is a discovery project intended to discover the scope an
 
 ## Getting Started
 
-Zoey is written in the python language and developed in Centos 7.0. Zoey can take advantage of several APIs, each of which can be installed as a seperate modules.
+Zoey is written in the python 2.7.5 language and developed in Centos 7.0. Zoey can take advantage of several APIs, each of which can be installed as a seperate modules.
