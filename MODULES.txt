@@ -2,9 +2,10 @@ Assumes python 2.7.5 and Python-Pip are already installed
 Packages are staged into module_installer
 
 ## GitPython (https://github.com/gitpython-developers/GitPython)
-git clone git@github.com:gitpython-developers/GitPython.git
-mv /GitPython /opt/zoey/modules/GitPython
+mkdir /opt/zoey/modules/GitPython
 cd /opt/zoey/modules/GitPython
+git clone git@github.com:gitpython-developers/GitPython.git
+git submodule update --init --recursive
 python setup.py install
 
 
