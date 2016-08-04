@@ -1,7 +1,15 @@
 Assumes python 2.7.5 and Python-Pip are already installed
+Packages are staged into module_installer
 
-# NLTK 
+## GitPython (https://github.com/gitpython-developers/GitPython)
+git clone git@github.com:gitpython-developers/GitPython.git
+mv /GitPython /opt/zoey/modules/GitPython
+cd /opt/zoey/modules/GitPython
+python setup.py install
+
+
+## NLTK 
 Natural Language Toolkit (https://github.com/nltk/nltk) and all dependent modules can be installed via python-pip.
-
+sudo pip install -U nltk
 
 
