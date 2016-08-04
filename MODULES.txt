@@ -1,2 +1,7 @@
-Natural Language Toolkit (NLTK) https://github.com/nltk/nltk
+Assumes python 2.7.5 and Python-Pip are already installed
+
+# NLTK 
+Natural Language Toolkit (https://github.com/nltk/nltk) and all dependent modules can be installed via python-pip.
+
+
 
