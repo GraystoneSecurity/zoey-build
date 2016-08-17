@@ -1,6 +1,8 @@
 #!/bin/bash
 # Base Installation Scripts
 cd /
+sudo mkdir /opt/zoey
+sudo mkdir /opt/zoey/modules
 sudo yum clean all
 sudo yum update -y
 
