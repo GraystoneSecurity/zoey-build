@@ -4,7 +4,7 @@ cd /
 sudo yum clean all
 sudo yum update -y
 
-echo Assumes python 2.7.5 already installed. Checking python version
+echo Assumes python 2.7.6 already installed. Checking python version
 if which python > /dev/null 2>&1;
 then
     #Python is installed
