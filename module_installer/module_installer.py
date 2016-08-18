@@ -2,7 +2,9 @@
 import os
 import shutil
 import stat
+
 # Copies files from git staging directories into operating directory
+os.chdir(/opt/zoey/module_installer)
 def copytree(src, dst, symlinks = False, ignore = None):
   if not os.path.exists(dst):
     os.makedirs(dst)

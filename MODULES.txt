@@ -2,9 +2,11 @@ Zoey uses Python-Pip to install and udpates modules.
 Packages are staged into the directory module_installer
 
 The following modules come standard:
+
 ## GitPython (https://github.com/gitpython-developers/GitPython)
 Git python allows Zoey to install moduele by pulling Git code directly
 
 ## NLTK (https://github.com/nltk/nltk)
 The Natural Language Toolkit is the basis for Zoey's vocabular abilities.
+
 
