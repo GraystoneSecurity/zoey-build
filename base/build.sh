@@ -29,7 +29,6 @@ else
 fi
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 python get-pip.py
-python get-pip.py
 echo "Python Setup is complete. Starting main Zoey install"
 
 echo "Moving base code in place into /opt/zoey_graystone"
