@@ -1,9 +1,9 @@
 #!/bin/bash
 # Base Installation Scripts ensure OS is ready for python and application working directories. Install is then turned over to setup.py
 cd /
-sudo mkdir /opt/zoey
-sudo mkdir /opt/zoey/modules
-sudo mkdir /opt/zoey/module_installer
+sudo mkdir /opt/zoey_graystone
+sudo mkdir /opt/zoey_graystone/modules
+sudo mkdir /opt/zoey_graystone/module_installer
 sudo yum clean all
 sudo yum update -y
 
@@ -27,6 +27,23 @@ else
     sudo export PATH="/usr/local/bin:$PATH"
     cd /
 fi
-sudo yum install python-pip
-python setup.py
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+python get-pip.py
+echo "Python Setup is complete. Starting main Zoey install"
+
+echo "Moving base code in place into /opt/zoey_graystone"
+sudo mv setup.py /opt/zoey_graystone
+
+echo "WARNING: CONTINUING WILL INSTALL THE ZOEY GRAYSTONE A.I.
+AND OVERWRITE ANY EXISTING FILES IN THE MAIN DIRECTORY"
+
+read -r -p "Install Zoey Graystone A.I.? [y/N] " response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    sudo python /opt/zoey_graystone/setup.py
+else
+    echo "Install Aborted"
+fi
+
 
