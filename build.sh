@@ -2,8 +2,10 @@
 # Base Installation Scripts ensure OS is ready for python and application working directories. Install is then turned over to setup.py
 cd /
 sudo mkdir /opt/zoey_graystone
+touch /opt/zoey_graystone/__init__.py
 sudo mkdir /opt/zoey_graystone/modules
-sudo mkdir /opt/zoey_graystone/module_installer
+touch /opt/zoey_graystone/modules/__init__.py
+
 sudo yum clean all
 sudo yum update -y
 
