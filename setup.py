@@ -1,8 +1,10 @@
 #!/usr/bin/python
-import os, sys
+import os
 import shutil
 import stat
+import subprocess
 from setuptools import setup
+
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -55,22 +57,26 @@ def copytree(src, dst, symlinks = False, ignore = None):
       shutil.copy2(s, d)
 
 ## GitPython (https://github.com/gitpython-developers/GitPython)
-path = "home/zoey/Projects/zoey-build/module_installer/GitPython"
-os.mkdir (path, 0755 );
-git clone git@github.com:gitpython-developers/GitPython.git
+def GitPython_Install ():
+    path = "/home/zoey/Projects/zoey-build/module_installer/GitPython";
+        os.makedirs (path, 0755 );
+    suprocess.call ("git clone git@github.com:gitpython-developers/GitPython.git");
 # Submodule updates to be run from top level down
-#git submodule update --init --recursive
-path = "/opt/zoey_graystone/modules/GitPython"
-os.mkdir (path, 0755 );
+    path = "/home/zoey/Projects/zoey-build/":
+    suprocess.call ("git submodule update --init --recursive");
+# Move Files into place
+    path = "/opt/zoey_graystone/modules/GitPython":
+    os.makedirs (path, 0755 );
+    copytree(/home/zoey/Projects/zoey-build/module_installer/GitPython, /opt/zoey_graystone/modules/GitPython);
 # Run Setup
-from GitPython import setup.py 
-setup.py install
-#./init-tests-after-clone.sh
+    from GitPython import setup.py
+        setup.py install
+        suprocess.call("./init-tests-after-clone.sh")
 
 
 ## NLTK 
 # Natural Language Toolkit (https://github.com/nltk/nltk)
-sudo mkdir /opt/zoey/modules/NLTK
+#sudo mkdir /opt/zoey/modules/NLTK
 # install process needs work after this, can't authenticate to GitHub to pull. Pubkey error
 #git clone git@github.com:nltk/nltk.git
 #git submodule update --init --recursivecd 
@@ -79,7 +85,7 @@ sudo mkdir /opt/zoey/modules/NLTK
 
 ## python-ts3
 # Python TS3 Module (https://github.com/nikdoof/python-ts3)
-sudo mkdir /opt/zoey/modules/python-ts3
+#sudo mkdir /opt/zoey/modules/python-ts3
 # install process needs work after this, can't authenticate to GitHub to pull. Pubkey error
 #git git@github.com:nikdoof/python-ts3.git
 #git submodule update --init --recursive
