@@ -34,15 +34,15 @@ python get-pip.py
 echo "Python Setup is complete. Starting main Zoey install"
 
 echo "Moving base code in place into /opt/zoey_graystone"
-sudo mv setup.py /opt/zoey_graystone
-
+sudo mv build.py /opt/zoey_graystone
+chmod 775 /opt/zoey_graystone/build.py
 echo "WARNING: CONTINUING WILL INSTALL THE ZOEY GRAYSTONE A.I.
 AND OVERWRITE ANY EXISTING FILES IN THE MAIN DIRECTORY"
 
 read -r -p "Install Zoey Graystone A.I.? [y/N] " response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-    sudo python /opt/zoey_graystone/setup.py
+    sudo python /opt/zoey_graystone/build.py
 else
     echo "Install Aborted"
 fi
