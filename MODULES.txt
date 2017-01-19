@@ -4,12 +4,7 @@ Packages are staged into the directory module_installer
 # The following modules come standard:
 
 ## GitPython (https://github.com/gitpython-developers/GitPython)
-Git python allows Zoey to install moduele by pulling Git code directly
+Git python allows Zoey to install modueles by pulling Git code directly
 
 ## NLTK (https://github.com/nltk/nltk)
 The Natural Language Toolkit is the basis for Zoey's vocabular abilities.
-
-# The following are optional voice control modules
-## TeamSpeak 3 Integration (API) (https://github.com/nikdoof/python-ts3)
-python-ts3 is a abstraction library around the Teamspeak 3 ServerQuery API. It allows native access to the ServerQuery API with most of the formatting headaches avoided. 
-
