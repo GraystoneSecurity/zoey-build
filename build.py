@@ -13,7 +13,7 @@ def read(fname):
 
 setup (
     name="Zoey Graystone",
-    version="0.0.4",
+    version="0.0.5",
     author="Daniel Graystone",
     author_email="daniel@graystone.solutions",
     description=("An interactive A.I."),
