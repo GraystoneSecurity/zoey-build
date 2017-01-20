@@ -13,7 +13,7 @@ def read(fname):
 
 setup (
     name="Zoey Graystone",
-    version="0.0.6",
+    version="0.0.7",
     author="Daniel Graystone",
     author_email="daniel@graystone.solutions",
     description=("An interactive A.I."),
@@ -32,6 +32,7 @@ setup (
     ],
 )
 buildroot = "/home/zoey/Projects/zoey-build/"
+oproot = "/opt/zoey_graystone/"
 
 
 def copytree(src, dst, symlinks=False, ignore=None):
