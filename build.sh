@@ -34,8 +34,9 @@ python get-pip.py
 echo "Python Setup is complete. Starting main Zoey install"
 
 echo "Moving base code in place into /opt/zoey_graystone"
+cd /home/zoey/Projects/zoey-build
 sudo mv build.py /opt/zoey_graystone
-chmod 775 /opt/zoey_graystone/build.py
+sudo chmod 775 /opt/zoey_graystone/build.py
 echo "WARNING: CONTINUING WILL INSTALL THE ZOEY GRAYSTONE A.I.
 AND OVERWRITE ANY EXISTING FILES IN THE MAIN DIRECTORY"
 
