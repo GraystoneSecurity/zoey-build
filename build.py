@@ -13,7 +13,7 @@ def read(fname):
 
 setup (
     name="Zoey Graystone",
-    version="0.0.5",
+    version="0.0.6",
     author="Daniel Graystone",
     author_email="daniel@graystone.solutions",
     description=("An interactive A.I."),
@@ -101,4 +101,25 @@ def nltk_install():
 
     # Run Setup
     os.chdir (nltkopdir)
+    os.system ("setup.py install")
+
+
+# Tweepy - Twitter for Python (https://github.com/tweepy/tweepy)
+def tweepy_install():
+    tweepyloaddir = '/home/zoey/Projects/zoey-build/module_installer/tweepy'
+    tweepyopdir = '/opt/zoey_graystone/modules/tweepy'
+    os.makedirs (tweepyloaddir, 0755)
+    subprocess.call ("git clone git@github.com:tweepy/tweepy.git")
+    # Submodule updates to be run from top level down
+    os.chdir (buildroot)
+    subprocess.call ("git submodule update --init --recursive")
+    # Move Files into place
+    os.makedirs (tweepyopdir, 0755)
+
+    def copytree():
+        s = (tweepyloaddir)
+        d = (tweepyopdir)
+
+    # Run Setup
+    os.chdir (tweepyopdir)
     os.system ("setup.py install")

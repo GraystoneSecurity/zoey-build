@@ -42,7 +42,7 @@ AND OVERWRITE ANY EXISTING FILES IN THE MAIN DIRECTORY"
 read -r -p "Install Zoey Graystone A.I.? [y/N] " response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-    sudo python /opt/zoey_graystone/build.py
+    sudo python /opt/zoey_graystone/build.py install
 else
     echo "Install Aborted"
 fi

@@ -1,10 +1,13 @@
-Zoey uses Python-Pip to install and udpates modules.
-Packages are staged into the directory module_installer
+Zoey comes with several baseline modules installed via the build scripts. These modules are pulled from github.
+Packages are staged into the directory module_installer directory then moved into the modules operational directory.
 
 # The following modules come standard:
 
 ## GitPython (https://github.com/gitpython-developers/GitPython)
-Git python allows Zoey to install modueles by pulling Git code directly
+Git Python allows Zoey to perform future self-updates of her source code from Github
 
 ## NLTK (https://github.com/nltk/nltk)
-The Natural Language Toolkit is the basis for Zoey's vocabular abilities.
+The Natural Language Toolkit is the basis for Zoey's linguistic abilities.
+
+## Tweepy - Twitter for Python (https://github.com/tweepy/tweepy)
+Twitter for Python! Allows Zoey to connect to twitter. Zoey can communicate via DMs to a configured account.
