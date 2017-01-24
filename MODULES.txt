@@ -11,3 +11,6 @@ The Natural Language Toolkit is the basis for Zoey's linguistic abilities.
 
 ## Tweepy - Twitter for Python (https://github.com/tweepy/tweepy)
 Twitter for Python! Allows Zoey to connect to twitter. Zoey can communicate via DMs to a configured account.
+
+## pyfttt - Python tools for interacting with IFTTT Maker Channel
+Allows Zoey interface with hundreds of platforms via the If This The That (IFTTT) Maker Channel

@@ -13,7 +13,7 @@ def read(fname):
 
 setup (
     name="Zoey Graystone",
-    version="0.0.7",
+    version="0.0.8",
     author="Daniel Graystone",
     author_email="daniel@graystone.solutions",
     description=("An interactive A.I."),
@@ -123,4 +123,25 @@ def tweepy_install():
 
     # Run Setup
     os.chdir (tweepyopdir)
+    os.system ("setup.py install")
+
+
+# pyfttt - https://github.com/briandconnelly/pyfttt
+def pyfttt_install():
+    pyftttloaddir = '/home/zoey/Projects/zoey-build/module_installer/pyfttt'
+    pyftttopdir = '/opt/zoey_graystone/modules/pyfttt'
+    os.makedirs (pyftttloaddir, 0755)
+    subprocess.call ("git clone git@github.com:briandconnelly/pyfttt.git")
+    # Submodule updates to be run from top level down
+    os.chdir (buildroot)
+    subprocess.call ("git submodule update --init --recursive")
+    # Move Files into place
+    os.makedirs (pyftttopdir, 0755)
+
+    def copytree():
+        s = (pyftttloaddir)
+        d = (pyftttopdir)
+
+    # Run Setup
+    os.chdir (pyftttopdir)
     os.system ("setup.py install")
